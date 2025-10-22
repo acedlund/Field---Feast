@@ -62,3 +62,31 @@ table {
     font-family: 'Playfair Display';
 
 }
+
+header {
+    background-color: var(--midnight-blue);
+}
+
+nav {
+    background-color: var(--champagne-gold);
+    color: var(--dark-charcoal);
+}
+
+main {
+    background-color: var(--linen);
+    color: var(--dark-charcoal)
+}
+
+#welcome, #offerings, #gallery {
+    border-bottom: 2px solid var(--champagne-gold);
+}
+
+#provisions, #experiences, #monthlyBasket {
+    background-color: var(--olive-green);
+    border-radius: 16px;
+}
+
+#gallery a {
+    background-color: var(--olive-green);
+    color: var(--linen);
+}

@@ -61,10 +61,32 @@ table {
 
     font-family: 'Playfair Display';
 
+    --sm-box-shadow: 1px 2px 5px var(--dark-charcoal)
 }
 
 header {
     background-color: var(--midnight-blue);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--linen);
+}
+
+header img {
+    max-width: 200px;
+    max-height: 300px;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+header p {
+    font-style: italic;
+    padding: 15px;
+    font-size: 1.2rem;
 }
 
 nav {
@@ -72,21 +94,177 @@ nav {
     color: var(--dark-charcoal);
 }
 
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 12px;
+}
+
 main {
-    background-color: var(--linen);
-    color: var(--dark-charcoal)
+    background-color: var(--soft-white);
+    color: var(--dark-charcoal);
+    line-height: 1.2;
+    padding: 15px 10px 30px 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 30px 10px 5px 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--linen);
+    font-weight: bold;
 }
 
 #welcome, #offerings, #gallery {
     border-bottom: 2px solid var(--champagne-gold);
+    margin: 0 15px 0 15px;
+    padding-bottom: 10px;
+}
+
+p {
+    padding: 0 0 10px 0;
 }
 
 #provisions, #experiences, #monthlyBasket {
+    display: grid;
+    grid-template-columns: 1fr;
     background-color: var(--olive-green);
     border-radius: 16px;
+    color: var(--linen);
+    padding: 10px;
+    margin: 15px 0 15px 0;
+    box-shadow: var(--sm-box-shadow);
+    line-height: 1.4;
+}
+
+#monthlyBasket ul {
+    list-style: disc inside;
 }
 
 #gallery a {
+    display: grid;
+    grid-template-columns: 1fr;
     background-color: var(--olive-green);
     color: var(--linen);
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px auto 15px;
+    text-decoration: none;
+}
+
+#gallery figure {
+    border-radius: 16px;
+    min-width: 385px;
+    max-width: 385px;
+    box-shadow: var(--sm-box-shadow);
+    margin: 15px auto;
+}
+
+#gallery img {
+    max-width: 385px;
+    border-radius: 16px 16px 0% 0%;
+}
+
+#gallery figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--midnight-blue);
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--linen);
+    padding: 50px 0 0 0;
+}
+
+address {
+    padding: 10px 0 20px 0;
+    line-height: 1.5;
+}
+
+#phone {
+    color: var(--linen);
+    text-decoration: none;
+}
+
+#email, #instagram, #facebook {
+    color: var(--champagne-gold);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#socials {
+    padding: 25px;
+}
+
+@media screen and (min-width:665px){
+
+    #offerings {
+        display: grid;
+    }
+
+    #provisions {
+        grid-row: 2/3;
+        margin-right: 15px;
+    }
+
+    #experiences {
+        grid-row: 2/3;
+        grid-column:3/4;
+        margin-left: 15px;
+    }
+
+    #monthlyBasket {
+        grid-row: 3/4;
+        grid-column: 1/4;
+    }
+
+    #figures {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #gallery figure {
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    #gallery img {
+        max-width: 300px;
+    }
+
+}
+
+@media screen and (min-width:965px) {
+    #figures {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    
+    #figures {
+        grid-template-columns: repeat(5,1fr);
+    }
+    #gallery figure {
+        min-width: 225px;
+        max-width: 225px;
+    }
+
+    #gallery img {
+        max-width: 225px;
+    }
 }

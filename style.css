@@ -165,7 +165,6 @@ p {
     min-width: 385px;
     max-width: 385px;
     box-shadow: var(--sm-box-shadow);
-    margin: 15px auto;
 }
 
 #gallery img {
@@ -178,6 +177,10 @@ p {
     font-style: italic;
     font-size: smaller;
     padding: 10px;
+}
+
+#tomatoes, #olive, #table, #plate, #basket {
+    margin: 15px auto;
 }
 
 footer {
@@ -210,7 +213,12 @@ address {
     padding: 25px;
 }
 
-@media screen and (min-width:665px){
+@media screen and (min-width:550px){
+
+    #welcome, #offerings, #gallery {
+        max-width: 530px;
+        margin: 0 auto;
+    }
 
     #offerings {
         display: grid;
@@ -238,33 +246,112 @@ address {
     }
 
     #gallery figure {
-        min-width: 300px;
-        max-width: 300px;
+        min-width: 250px;
+        max-width: 250px;
     }
 
     #gallery img {
-        max-width: 300px;
+        max-width: 250px;
+    }
+
+    #tomatoes {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    #olive {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    #table {
+        margin-left: 0;
+    }
+
+    #plate {
+        margin-right: 0;
+    }
+
+    #basket {
+        margin-left: 0;
     }
 
 }
 
-@media screen and (min-width:965px) {
+@media screen and (min-width:820px) {
+#welcome, #offerings, #gallery {
+        max-width: 805px;
+        margin: 0 auto;
+    }
+
     #figures {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    #tomatoes {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    #olive {
+        margin-top: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #table {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    #plate {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    #basket {
+        margin-left: auto;
+    }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1050px) {
+    #welcome, #offerings, #gallery {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
     
     #figures {
         grid-template-columns: repeat(5,1fr);
     }
+
+
+    #tomatoes {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    #olive, #table, #plate {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #plate {
+        margin-top: 0;
+    }
+
+    #basket {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
     #gallery figure {
-        min-width: 225px;
-        max-width: 225px;
+        min-width: 200px;
+        max-width: 200px;
     }
 
     #gallery img {
-        max-width: 225px;
+        max-width: 200px;
     }
 }
